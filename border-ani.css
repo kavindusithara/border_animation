@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background-color: rgb(20, 20, 31);
+}
+
+.box1{
+    margin: 80px 150px;
+    position: relative;
+    width: 200px;
+    height: 60px;
+    background: rgb(0, 0, 0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    
+    
+}
+
+.box1::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 450%;
+    background: linear-gradient(rgb(6, 205, 255) 50%, rgb(24, 20, 255) 0% );
+    animation: div1ani 5s linear infinite;
+}
+
+.box1::after{
+    content: "";
+    position: absolute;
+    width: 95%;
+    height: 80%;
+    background:black ;
+}
+
+@keyframes div1ani {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+
+.box1 h2{
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    z-index: 2;
+}
+
+.box2{
+    margin: 80px 150px;
+    border-radius: 30px;
+    position: relative;
+    width: 200px;
+    height: 60px;
+    background: rgb(0, 0, 0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+
+.box2::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 450%;
+    background : conic-gradient(
+        #fd004c,
+        #fe9000,
+        #fff020,
+        #3edf4b,
+        #3363ff,
+        #b102b7,
+        #fd004c
+    );
+    animation: div2ani 2s linear infinite;
+}
+
+
+
+.box2::after{
+    content: "";
+    position: absolute;
+    width: 95%;
+    height: 80%;
+    background:black ;
+    border-radius: 30px;
+}
+
+@keyframes div2ani {
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.box2 h2{
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    z-index: 2;
+}
